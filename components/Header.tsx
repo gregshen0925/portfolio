@@ -35,7 +35,12 @@ export default function Header({ }: Props) {
                     bgColor="transparent"
                 />
                 <SocialIcon
-                    url="https://twitter.com/gregshen0925"
+                    url="https://www.linkedin.com/in/greg-shen-b43527252/"
+                    fgColor="gray"
+                    bgColor="transparent"
+                />
+                <SocialIcon
+                    url="https://www.instagram.com/gregshen0925/"
                     fgColor="gray"
                     bgColor="transparent"
                 />

@@ -3,6 +3,7 @@ import { Cursor, useTypewriter } from "react-simple-typewriter"
 import BackgroundCircles from './BackgroundCircles'
 import Image from "next/image"
 import seaTurtle from "../src/seaTurtle.jpg"
+import Link from 'next/link'
 type Props = {}
 
 export default function Hero({ }: Props) {
@@ -10,7 +11,7 @@ export default function Hero({ }: Props) {
     words: [
       "Hi, This Is Greg Shen",
       "Guy-who-loves-everything",
-      "<Keep_Learning_Keep_Coding />",
+      "<Keep_Learning_Keep_Coding/>",
     ],
     loop: true,
     delaySpeed: 2000,
@@ -29,7 +30,7 @@ export default function Hero({ }: Props) {
           alt=""
         />
       </div>
-      <div>
+      <div className='z-20'>
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
           Founder Of InJoy Labs
         </h2>
@@ -37,6 +38,21 @@ export default function Hero({ }: Props) {
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="#F7AB0A" />
         </h1>
+
+        <div className="pt-5">
+          <Link href="#about">
+            <button className='gregButton'>About</button>
+          </Link>
+          <Link href="#experience">
+            <button className='gregButton'>Experience</button>
+          </Link>
+          <Link href="#skills">
+            <button className='gregButton'>Skills</button>
+          </Link>
+          <Link href="#projects">
+            <button className='gregButton'>Projects</button>
+          </Link>
+        </div>
       </div>
     </div>
   )
