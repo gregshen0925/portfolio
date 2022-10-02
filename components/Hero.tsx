@@ -6,7 +6,7 @@ import seaTurtle from "../src/seaTurtle.jpg"
 import Link from 'next/link'
 type Props = {}
 
-export default function Hero({ }: Props) {
+const Hero = (props: Props) => {
   const [text, count] = useTypewriter({
     words: [
       "Hi, This Is Greg Shen",
@@ -57,3 +57,5 @@ export default function Hero({ }: Props) {
     </div>
   )
 }
+
+export default Hero
