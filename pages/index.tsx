@@ -32,7 +32,7 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
     overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20
      scrollbar-thumb-[#F7AB0A]">
       <Head>
-        <title>Portfolio of Greg</title>
+        <title>GregShen Portfolio</title>
       </Head>
 
       <Header socials={socials} />
