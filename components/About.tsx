@@ -1,11 +1,15 @@
 import { MotionConfig } from 'framer-motion'
 import React from 'react'
 import { motion } from "framer-motion"
+import { PageInfo } from '../typings.d';
+import { urlFor } from '../sanity';
 
 
-type Props = {}
+type Props = {
+    pageInfo: PageInfo
+}
 
-const About = (props: Props) => {
+const About = ({ pageInfo }: Props) => {
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -27,7 +31,7 @@ const About = (props: Props) => {
                 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80"
+                src={urlFor(pageInfo?.profilePic).url()}
                 className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover
                 md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]'
             />
@@ -37,8 +41,8 @@ const About = (props: Props) => {
                     <span className='underline decoration-[#F7aB0A]/50'>little</span>{" "}
                     background
                 </h4>
-                <p className='text-sm'>
-                    Hi, I'm Greg. Yo
+                <p className='text-md'>
+                    {pageInfo?.backgroundInfo}
                 </p>
             </div>
 
