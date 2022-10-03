@@ -6,6 +6,7 @@ import Hero from '../components/Hero'
 import Experiences from '../components/Experiences'
 import Skills from '../components/Skills'
 import Projects from '../components/Projects'
+import ContactMe from '../components/ContactMe'
 
 const Home: NextPage = () => {
   return (
@@ -37,10 +38,9 @@ const Home: NextPage = () => {
         <Projects />
       </section>
 
-
-      {/* Projects */}
-
-      {/* Contact Me */}
+      <section id="contact" className='snap-start'>
+        <ContactMe />
+      </section>
 
     </div>
   )
