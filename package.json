@@ -11,6 +11,7 @@
   "dependencies": {
     "-": "^0.0.1",
     "@heroicons/react": "^2.0.11",
+    "@sanity/image-url": "^1.0.1",
     "D": "^1.0.0",
     "framer-motion": "^7.5.1",
     "next": "12.3.1",
@@ -22,12 +23,14 @@
     "tailwindcss": "^3.1.8"
   },
   "devDependencies": {
+    "@portabletext/react": "^1.0.6",
     "@types/node": "18.7.23",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
     "autoprefixer": "^10.4.12",
     "eslint": "8.24.0",
     "eslint-config-next": "12.3.1",
+    "next-sanity": "^0.8.4",
     "postcss": "^8.4.17",
     "tailwind-scrollbar": "^2.0.1",
     "typescript": "4.8.4"
