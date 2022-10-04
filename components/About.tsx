@@ -20,7 +20,6 @@ const About = ({ pageInfo }: Props) => {
             <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
                 About
             </h3>
-
             <motion.img
                 initial={{
                     x: -200,
@@ -32,8 +31,8 @@ const About = ({ pageInfo }: Props) => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 src={urlFor(pageInfo?.profilePic).url()}
-                className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover
-                md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]'
+                className='-mb-20 md:mb-0 flex-shrink-0 h-28 w-28 rounded-full object-cover
+                md:rounded-lg md:w-[500px] md:h-[500px] xl:w-[500px] xl:h-[600px]'
             />
             <div className='space-y-10 px-0 md:px-10'>
                 <h4 className='text-4xl font-semibold'>

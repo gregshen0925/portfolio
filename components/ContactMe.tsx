@@ -26,7 +26,7 @@ const ContactMe = (props: Props) => {
             </h3>
 
             <div className='flex flex-col space-y-10'>
-                <h4 className='text-4xl font-semibold text-center'>
+                <h4 className='text-3xl font-semibold text-center'>
                     I have got just what you need.{" "}
                     <span className='decoration-[#F7AB0A]/50 underline'>Let's Talk</span>
                 </h4>
@@ -41,10 +41,10 @@ const ContactMe = (props: Props) => {
                         <p className='text-2xl'>gregshen0925@pm.me</p>
                     </div>
 
-                    <div className='flex items-center space-x-5 justify-center'>
+                    {/* <div className='flex items-center space-x-5 justify-center'>
                         <MapPinIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
                         <p className='text-2xl'>address</p>
-                    </div>
+                    </div> */}
                 </div>
 
                 <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2 w-fit mx-auto">
