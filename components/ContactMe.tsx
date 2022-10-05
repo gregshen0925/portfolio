@@ -16,7 +16,7 @@ type Props = {}
 const ContactMe = (props: Props) => {
     const [text, count] = useTypewriter({
         words: [
-            "Click Me To Talk!"
+            "Chat On Telegram!"
         ],
         loop: false,
         delaySpeed: 2000,
@@ -30,7 +30,7 @@ const ContactMe = (props: Props) => {
     return (
         <div className='h-screen flex relative flex-col text-center md:text-left md:flex-row
         max-w-7xl px-10 justify-evenly mx-auto items-center'>
-            <h3 className='absolute top-24 uppercase tracking-[20px] text-[#447de6] text-2xl'>
+            <h3 className='absolute top-24 uppercase tracking-[20px] text-[#447de6]/50 text-2xl'>
                 &nbsp;Contact
             </h3>
 
@@ -41,7 +41,7 @@ const ContactMe = (props: Props) => {
                 <div className='items-center text-center'>
                     <a href="https://t.me/gregshen0925">
                         <motion.div>
-                            <span className='text-3xl decoration-[#447de6]/50 underline'>{text}</span>
+                            <span className='text-3xl decoration-[#447de6] underline'>{text}</span>
                         </motion.div>
                     </a>
                 </div>
