@@ -1,5 +1,4 @@
 import React from 'react'
-import seaTurtle from "../src/seaTurtle.jpg"
 import { motion } from "framer-motion"
 import Image from 'next/image'
 import { Experience } from '../typings'

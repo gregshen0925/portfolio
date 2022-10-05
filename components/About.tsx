@@ -1,4 +1,3 @@
-import { MotionConfig } from 'framer-motion'
 import React from 'react'
 import { motion } from "framer-motion"
 import { PageInfo } from '../typings.d';

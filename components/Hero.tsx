@@ -2,7 +2,6 @@ import React from 'react'
 import { Cursor, useTypewriter } from "react-simple-typewriter"
 import BackgroundCircles from './BackgroundCircles'
 import Image from "next/image"
-import seaTurtle from "../src/seaTurtle.jpg"
 import Link from 'next/link'
 import { PageInfo } from '../typings.d';
 import { urlFor } from '../sanity';
@@ -24,7 +23,7 @@ const Hero = ({ pageInfo }: Props) => {
   })
 
   return (
-    <div className="h-screen flex flex-col space-y-8 items-center justify-center 
+    <div className="h-screen flex flex-col space-y-10 items-center justify-center 
     text-center overflow-hidden">
       <BackgroundCircles />
       <div className='relative h-32 w-32 mx-auto'>
