@@ -29,7 +29,7 @@ type Props = {
 const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
   return (
     <div className="bg-[rgb(2,2,2)] text-white h-screen snap-y snap-mandatory
-    overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-[#112a99]-400/20
+    overflow-y-scroll overflow-x-hidden z-0  scrollbar-track-[#112a99]-400/20
      scrollbar-thumb-[#112a99] scrollbar-thin">
       <Head>
         <title>GregShen Portfolio</title>

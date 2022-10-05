@@ -16,7 +16,7 @@ type Props = {}
 const ContactMe = (props: Props) => {
     const [text, count] = useTypewriter({
         words: [
-            "Let's Talk!"
+            "Click Me To Talk!"
         ],
         loop: false,
         delaySpeed: 2000,
@@ -38,14 +38,13 @@ const ContactMe = (props: Props) => {
                 <h4 className='text-3xl font-semibold text-center'>
                     &nbsp;Feel free to contact
                 </h4>
-                <a href="https://t.me/gregshen0925">
-
-                    <motion.div
-                    >
-                        <span className='text-center text-3xl decoration-[#F7AB0A]/50 underline'>{text}</span>
-
-                    </motion.div>
-                </a>
+                <div className='items-center text-center'>
+                    <a href="https://t.me/gregshen0925">
+                        <motion.div>
+                            <span className='text-3xl decoration-[#447de6]/50 underline'>{text}</span>
+                        </motion.div>
+                    </a>
+                </div>
                 <div className='space-y-10'>
                     {/* <div className='flex items-center space-x-5 justify-center'>
                         <PhoneIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
@@ -53,25 +52,17 @@ const ContactMe = (props: Props) => {
                     </div> */}
 
                     <div className='flex items-center space-x-5 justify-center'>
-                        <EnvelopeIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
+                        <EnvelopeIcon className='text-[#447de6] h-7 w-7 animate-pulse' />
                         <p className='text-2xl'>gregshen0925@pm.me</p>
                     </div>
                     <div className='flex items-center space-x-5 justify-center'>
-                        <h4>
-                            This website is built with
-                        </h4>
+                        <h4>This website is built with</h4>
                     </div>
-                    <div>
-                        <h4>
-                            Next.js + Typescript
-                        </h4>
-                        <h4>
-                            Sanity
-                        </h4>
-
-                        <h4>
-                            Tailwind CSS
-                        </h4>
+                    <div className='flex items-center space-x-5 justify-center text-[#09ce86]'>
+                        <p>Next.js</p>
+                        <p>Typescript</p>
+                        <p>Sanity</p>
+                        <p>Tailwind CSS</p>
                     </div>
 
                     {/* <div className='flex items-center space-x-5 justify-center'>
