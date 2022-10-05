@@ -29,7 +29,7 @@ const About = ({ pageInfo }: Props) => {
                 // }}
                 // whileInView={{ opacity: 1, x: 0 }}
                 // viewport={{ once: true }}
-                src={urlFor(pageInfo?.profilePic).url()}
+                src={urlFor(pageInfo?.heroImage).url()}
                 className='-mb-20 md:mb-0 flex-shrink-0 h-28 w-28 rounded-full object-cover
                 md:rounded-lg md:w-[400px] md:h-[400px] xl:w-[500px] xl:h-[600px]'
             />

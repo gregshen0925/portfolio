@@ -16,6 +16,7 @@ import { fetchExperiences } from '../utils/fetchExperiences';
 import { fetchProjects } from '../utils/fetchProjects';
 import { fetchSocials } from '../utils/fetchSocials'
 import { fetchSkills } from '../utils/fetchSkills';
+import { urlFor } from '../sanity';
 
 
 type Props = {
@@ -66,7 +67,7 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
           <div className='flex items-center justify-center relative h-10 w-10 mx-auto 
           filter grayscale hover:grayscale-0 cursor-pointer'>
             <Image
-              src={seaTurtle}
+              src={urlFor(pageInfo.profilePic).url()}
               layout="fill"
               className="rounded-full"
               alt=""

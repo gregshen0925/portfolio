@@ -14,14 +14,14 @@ type Inputs = {
 type Props = {}
 
 const ContactMe = (props: Props) => {
-    const [text, count] = useTypewriter({
-        words: [
-            "Chat On Telegram!"
-        ],
-        loop: false,
-        delaySpeed: 2000,
-    })
-    const { register, handleSubmit } = useForm<Inputs>();
+    // const [text, count] = useTypewriter({
+    //     words: [
+    //         "Chat On Telegram!"
+    //     ],
+    //     loop: false,
+    //     delaySpeed: 2000,
+    // })
+    // const { register, handleSubmit } = useForm<Inputs>();
 
     const onSubmit: SubmitHandler<Inputs> = (formData) => {
         window.location.href = `mailto:gregshen0925@pm.me?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message}`
@@ -40,9 +40,7 @@ const ContactMe = (props: Props) => {
                 </h4>
                 <div className='items-center text-center'>
                     <a href="https://t.me/gregshen0925">
-                        <motion.div>
-                            <span className='text-3xl decoration-[#447de6]/50 underline'>{text}</span>
-                        </motion.div>
+                        <span className='text-3xl decoration-[#447de6]/50 underline animate-pulse'>Chat On Telegram!</span>
                     </a>
                 </div>
                 <div className='space-y-10'>
@@ -52,7 +50,7 @@ const ContactMe = (props: Props) => {
                     </div> */}
 
                     <div className='flex items-center space-x-5 justify-center'>
-                        <EnvelopeIcon className='text-[#447de6] h-7 w-7 animate-pulse' />
+                        <EnvelopeIcon className='text-[#447de6] h-7 w-7 ' />
                         <p className='text-2xl'>gregshen0925@pm.me</p>
                     </div>
                     <div className='flex items-center space-x-5 justify-center'>

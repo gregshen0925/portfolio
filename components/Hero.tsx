@@ -17,7 +17,7 @@ const Hero = ({ pageInfo }: Props) => {
       `Hi! This Is Greg!`,
       "<Keep_Learning-Keep-Coding />",
     ],
-    loop: true,
+    // loop: true,
     delaySpeed: 2000,
   })
 
@@ -27,7 +27,7 @@ const Hero = ({ pageInfo }: Props) => {
       <BackgroundCircles />
       <div className='relative h-32 w-32 mx-auto'>
         <Image
-          src={urlFor(pageInfo.heroImage).url()}
+          src={urlFor(pageInfo.profilePic).url()}
           layout="fill"
           objectFit="cover"
           className="rounded-full"
