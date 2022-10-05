@@ -10,7 +10,7 @@ type Props = {
 
 const Skills = ({ skills }: Props) => {
     return (
-        <motion.div className='flex relative flex-col text-center
+        <div className='flex relative flex-col text-center
         xl:flex-row max-w-[2000px] xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center'>
             <h3 className='absolute top-24 uppercase tracking-[20px] text-center text-[#447de6] text-2xl'>
                 &nbsp;skill
@@ -20,7 +20,8 @@ const Skills = ({ skills }: Props) => {
                 &nbsp;My skillset
             </h3>
 
-            <div className='grid grid-cols-4 gap-1 md:gap-3 xl:gap-5w-[350px] h-[200px] md:w-[500px] md:h-[350px] xl:w-[600px] xl:h-[550px]'>
+            <motion.div className='grid grid-cols-4 gap-2 md:gap-3 xl:gap-5 w-[350px] 
+            h-[200px] md:w-[500px] md:h-[350px] xl:w-[600px] xl:h-[550px]'>
                 {skills?.slice(0, skills.length / 2).map((skill) => (
                     <SkillPic key={skill._id} skill={skill} />
                 ))}
@@ -28,8 +29,8 @@ const Skills = ({ skills }: Props) => {
                 {skills?.slice(skills.length / 2, skills.length).map((skill) => (
                     <SkillPic key={skill._id} skill={skill} directionLeft />
                 ))}
-            </div>
-        </motion.div>
+            </motion.div>
+        </div>
     )
 }
 

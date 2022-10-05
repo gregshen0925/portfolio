@@ -11,17 +11,15 @@ type Props = {
 
 const Projects = ({ projects }: Props) => {
     return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1.5 }}
+        <div
+
             className='h-screen relative flex overflow-hidden flex-col text-left md:flex-row
             max-w-full justify-evenly mx-auto items-center z-0'
         >
             <h3 className='absolute top-24 uppercase tracking-[10px] text-[#447de6] text-2xl text-center'>
                 &nbsp;Recent Buidls
             </h3>
-            <h3 className='absolute top-40 uppercase tracking-[3px] text-gray-500 text-sm'>
+            <h3 className='absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm'>
                 &nbsp;CLICK ON THE TITLE FOR MORE INFO
             </h3>
 
@@ -30,15 +28,15 @@ const Projects = ({ projects }: Props) => {
                 {projects?.map((project, index) => (
                     <div className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5
                     items-center justify-center p-20 md:p-45 ' key={index}>
-                        <motion.img
-                            initial={{
-                                y: -300,
-                                opacity: 0,
-                            }}
-                            className="w-[200px] h-[100px] md:w-[250px] md:h-[125px] xl:w-[500px] xl:h-[300px]"
-                            transition={{ duration: 1.2 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                        <img
+                            // initial={{
+                            //     y: -300,
+                            //     opacity: 0,
+                            // }}
+                            className="w-[200px] h-[100px] md:w-[400px] md:h-[200px] xl:w-[500px] xl:h-[300px]"
+                            // transition={{ duration: 1.2 }}
+                            // whileInView={{ opacity: 1, y: 0 }}
+                            // viewport={{ once: true }}
                             src={urlFor(project?.image).url()}
                             alt=""
                         />
@@ -54,23 +52,15 @@ const Projects = ({ projects }: Props) => {
                             </a>
                             <div className='flex items-center space-x-2 justify-center'>
                                 {project?.technologies.map(technology => (
-                                    // <Image
-                                    //     className='rounded-full'
-                                    //     key={technology._id}
-                                    //     src={urlFor(technology.image).url()}
-                                    //     alt=""
-                                    //     height={30}
-                                    //     width={30}
-                                    // />
                                     <img
-                                        className='rounded-full h-10 w-10'
+                                        className='rounded-full h-6 w-6 md:h-10 md:w-10'
                                         key={technology._id}
                                         src={urlFor(technology.image).url()}
                                         alt=""
                                     />
                                 ))}
                             </div>
-                            <p className='text-lg text-center md:text-left'>
+                            <p className='text-xs text-center md:text-left md:text-xl'>
                                 {project?.summary}
                             </p>
                         </div>
@@ -80,7 +70,7 @@ const Projects = ({ projects }: Props) => {
 
             <div className='w-full absolute top-[30%] bg-[#0f5dec]/30 left-0 h-[300px] 
             max-h-[500px] -skew-y-12' />
-        </motion.div>
+        </div>
     )
 }
 
