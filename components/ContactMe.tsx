@@ -1,6 +1,8 @@
 import React from 'react'
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid"
 import { useForm, SubmitHandler } from "react-hook-form"
+import { motion } from 'framer-motion';
+import { useTypewriter } from 'react-simple-typewriter';
 
 type Inputs = {
     name: string,
@@ -12,6 +14,13 @@ type Inputs = {
 type Props = {}
 
 const ContactMe = (props: Props) => {
+    const [text, count] = useTypewriter({
+        words: [
+            "Let's Talk!"
+        ],
+        loop: false,
+        delaySpeed: 2000,
+    })
     const { register, handleSubmit } = useForm<Inputs>();
 
     const onSubmit: SubmitHandler<Inputs> = (formData) => {
@@ -21,20 +30,27 @@ const ContactMe = (props: Props) => {
     return (
         <div className='h-screen flex relative flex-col text-center md:text-left md:flex-row
         max-w-7xl px-10 justify-evenly mx-auto items-center'>
-            <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
+            <h3 className='absolute top-24 uppercase tracking-[20px] text-[#447de6] text-2xl'>
                 Contact
             </h3>
 
-            <div className='flex flex-col space-y-10'>
+            <div className='flex flex-col space-y-10 '>
                 <h4 className='text-3xl font-semibold text-center'>
-                    I have got just what you need.{" "}
-                    <span className='decoration-[#F7AB0A]/50 underline'>Let's Talk</span>
+                    I have got just what you need.
                 </h4>
+                <a href="https://t.me/gregshen0925">
+
+                    <motion.div
+                    >
+                        <span className='text-center text-3xl decoration-[#F7AB0A]/50 underline'>{text}</span>
+
+                    </motion.div>
+                </a>
                 <div className='space-y-10'>
-                    <div className='flex items-center space-x-5 justify-center'>
+                    {/* <div className='flex items-center space-x-5 justify-center'>
                         <PhoneIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
                         <p className='text-2xl'>+886 906154732</p>
-                    </div>
+                    </div> */}
 
                     <div className='flex items-center space-x-5 justify-center'>
                         <EnvelopeIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
@@ -47,7 +63,7 @@ const ContactMe = (props: Props) => {
                     </div> */}
                 </div>
 
-                <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2 w-fit mx-auto">
+                {/* <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2 w-60 mx-auto">
                     <div className='flex space-x-2'>
                         <input {...register('name')}
                             placeholder="Name"
@@ -71,7 +87,7 @@ const ContactMe = (props: Props) => {
                         type="submit"
                         className='bg-[#F7A40A] py-5 px-10 rounded-md text-black font-bold
                     text-lg'>Submit</button>
-                </form>
+                </form> */}
             </div>
         </div>
     )

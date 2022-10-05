@@ -29,8 +29,8 @@ type Props = {
 const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
   return (
     <div className="bg-[rgb(2,2,2)] text-white h-screen snap-y snap-mandatory
-    overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20
-     scrollbar-thumb-[#F7AB0A]">
+    overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-[#112a99]-400/20
+     scrollbar-thumb-[#112a99] scrollbar-thin">
       <Head>
         <title>GregShen Portfolio</title>
       </Head>
@@ -45,9 +45,9 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
         <About pageInfo={pageInfo} />
       </section>
 
-      <section id="experience" className='snap-center'>
+      {/* <section id="experience" className='snap-center'>
         <Experiences experiences={experiences} />
-      </section>
+      </section> */}
 
       <section id="skills" className='snap-start'>
         <Skills skills={skills} />

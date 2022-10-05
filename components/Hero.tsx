@@ -15,9 +15,9 @@ type Props = {
 const Hero = ({ pageInfo }: Props) => {
   const [text, count] = useTypewriter({
     words: [
-      `Hi, This Is ${pageInfo.name}`,
+      `Hi! This Is ${pageInfo.name}`,
       "Guy-who-loves-everything",
-      "<Keep_Learning_Keep_Coding/>",
+      "<Keep_Learning-Keep-Coding />",
     ],
     loop: true,
     delaySpeed: 2000,
@@ -40,7 +40,7 @@ const Hero = ({ pageInfo }: Props) => {
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
           {pageInfo?.role}
         </h2>
-        <h1 className="text-5xl lg:text-6xl font-semibold px-10">
+        <h1 className="text-5xl lg:text-6xl font-semibold px-10 text-[#447de6]">
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="#F7AB0A" />
         </h1>
@@ -49,9 +49,9 @@ const Hero = ({ pageInfo }: Props) => {
           <Link href="#about">
             <button className='gregButton'>About</button>
           </Link>
-          <Link href="#experience">
+          {/* <Link href="#experience">
             <button className='gregButton'>Experience</button>
-          </Link>
+          </Link> */}
           <Link href="#skills">
             <button className='gregButton'>Skills</button>
           </Link>
