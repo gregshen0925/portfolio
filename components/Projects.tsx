@@ -18,10 +18,10 @@ const Projects = ({ projects }: Props) => {
             max-w-full justify-evenly mx-auto items-center z-0'
         >
             <h3 className='absolute top-24 uppercase tracking-[10px] text-[#447de6] text-2xl text-center'>
-                Recent Buidls
+                &nbsp;Recent Buidls
             </h3>
             <h3 className='absolute top-40 uppercase tracking-[3px] text-gray-500 text-sm'>
-                CLICK ON THE TITLE FOR MORE INFO
+                &nbsp;CLICK ON THE TITLE FOR MORE INFO
             </h3>
 
             <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x
@@ -61,7 +61,7 @@ const Projects = ({ projects }: Props) => {
                                     />
                                 ))}
                             </div>
-                            <p className='text-lg text-left md:text-left'>
+                            <p className='text-lg text-center md:text-left'>
                                 {project?.summary}
                             </p>
                         </div>

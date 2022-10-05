@@ -25,10 +25,10 @@ const SkillPic = ({ skill, directionLeft }: Props) => {
                 ease-in-out'
             />
             <div className='absolute opacity-0 group-hover:opacity-80 transition duration-300
-            ease-in-out group-hover:bg-white h-24 w-24 md:w-28 xl:w-32 xl:h-32
+            ease-in-out group-hover:bg-white h-20 w-20 md:w-28 xl:w-32 xl:h-32
             rounded-full z-0'>
                 <div className='flex items-center justify-center h-full'>
-                    <p className='text-xl text-center font-bold text-black opacity-100'>{skill.title}</p>
+                    <p className='text-xs md:text-xl xl:text-xl text-center font-bold text-black opacity-100'>{skill.title}</p>
                 </div>
             </div>
         </div>

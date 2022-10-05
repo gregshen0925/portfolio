@@ -31,12 +31,12 @@ const ContactMe = (props: Props) => {
         <div className='h-screen flex relative flex-col text-center md:text-left md:flex-row
         max-w-7xl px-10 justify-evenly mx-auto items-center'>
             <h3 className='absolute top-24 uppercase tracking-[20px] text-[#447de6] text-2xl'>
-                Contact
+                &nbsp;Contact
             </h3>
 
             <div className='flex flex-col space-y-10 '>
                 <h4 className='text-3xl font-semibold text-center'>
-                    I have got just what you need.
+                    &nbsp;Feel free to contact
                 </h4>
                 <a href="https://t.me/gregshen0925">
 
@@ -55,6 +55,23 @@ const ContactMe = (props: Props) => {
                     <div className='flex items-center space-x-5 justify-center'>
                         <EnvelopeIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
                         <p className='text-2xl'>gregshen0925@pm.me</p>
+                    </div>
+                    <div className='flex items-center space-x-5 justify-center'>
+                        <h4>
+                            This website is built with
+                        </h4>
+                    </div>
+                    <div>
+                        <h4>
+                            Next.js + Typescript
+                        </h4>
+                        <h4>
+                            Sanity
+                        </h4>
+
+                        <h4>
+                            Tailwind CSS
+                        </h4>
                     </div>
 
                     {/* <div className='flex items-center space-x-5 justify-center'>
@@ -89,7 +106,7 @@ const ContactMe = (props: Props) => {
                     text-lg'>Submit</button>
                 </form> */}
             </div>
-        </div>
+        </div >
     )
 }
 
