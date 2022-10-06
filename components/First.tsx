@@ -3,7 +3,7 @@ import { Cursor, useTypewriter } from "react-simple-typewriter"
 import BackgroundCircles from './BackgroundCircles'
 import Image from "next/image"
 import Link from 'next/link'
-import { PageInfo } from '../typings.d';
+import { PageInfo } from '../typings';
 import { urlFor } from '../sanity';
 
 
@@ -11,7 +11,7 @@ type Props = {
   pageInfo: PageInfo
 }
 
-const Hero = ({ pageInfo }: Props) => {
+const First = ({ pageInfo }: Props) => {
   const [text, count] = useTypewriter({
     words: [
       `Hi! This Is Greg!`,
@@ -35,12 +35,12 @@ const Hero = ({ pageInfo }: Props) => {
         />
       </div>
       <div className='z-20'>
-        <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
-          {pageInfo?.role}
+        <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[12px] md:tracking-[15px]">
+          &nbsp;{pageInfo?.role}
         </h2>
-        <h1 className="text-5xl lg:text-6xl font-semibold px-10 text-[#447de6]">
+        <h1 className="text-5xl md:text-6xl font-semibold px-10 text-[#447de6]">
           <span className="mr-3">{text}</span>
-          <Cursor cursorColor="#F7AB0A" />
+          <Cursor cursorColor="#333333" />
         </h1>
 
         <div className="pt-5">
@@ -62,4 +62,4 @@ const Hero = ({ pageInfo }: Props) => {
   )
 }
 
-export default Hero
+export default First

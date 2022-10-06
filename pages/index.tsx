@@ -2,13 +2,12 @@ import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import About from '../components/About'
 import Header from '../components/Header'
-import Hero from '../components/Hero'
-import Experiences from '../components/Experiences'
+import First from '../components/First'
+// import Experiences from '../components/Experiences'
 import Skills from '../components/Skills'
 import Projects from '../components/Projects'
 import ContactMe from '../components/ContactMe'
 import Link from 'next/link'
-import seaTurtle from '../src/seaTurtle.jpg'
 import Image from 'next/image'
 import { Experience, PageInfo, Project, Skill, Social } from '../typings'
 import { fetchPageInfo } from '../utils/fetchPageInfo'
@@ -38,8 +37,8 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
 
       <Header socials={socials} />
 
-      <section id='hero' className="snap-start">
-        <Hero pageInfo={pageInfo} />
+      <section id='first' className="snap-start">
+        <First pageInfo={pageInfo} />
       </section>
 
       <section id="about" className='snap-center'>
@@ -62,7 +61,7 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
         <ContactMe />
       </section>
 
-      <Link href="#hero">
+      <Link href="#first">
         <footer className='sticky bottom-5 w-full cursor-pointer'>
           <div className='flex items-center justify-center relative h-10 w-10 mx-auto 
           filter grayscale hover:grayscale-0 cursor-pointer'>
