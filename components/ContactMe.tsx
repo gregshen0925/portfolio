@@ -1,0 +1,106 @@
+import React from "react";
+import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { motion } from "framer-motion";
+import { useTypewriter } from "react-simple-typewriter";
+
+type Inputs = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
+
+type Props = {};
+
+const ContactMe = (props: Props) => {
+  // const [text, count] = useTypewriter({
+  //     words: [
+  //         "Chat On Telegram!"
+  //     ],
+  //     loop: false,
+  //     delaySpeed: 2000,
+  // })
+  // const { register, handleSubmit } = useForm<Inputs>();
+
+  const onSubmit: SubmitHandler<Inputs> = (formData) => {
+    window.location.href = `mailto:gregshen0925@pm.me?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message}`;
+  };
+
+  return (
+    <div
+      className="h-screen flex relative flex-col text-center md:text-left md:flex-row
+        max-w-7xl px-10 justify-evenly mx-auto items-center"
+    >
+      <h3 className="absolute top-24 uppercase tracking-[20px] text-[#447de6] text-2xl">
+        &nbsp;Contact
+      </h3>
+
+      <div className="flex flex-col space-y-10 ">
+        <h4 className="text-3xl font-semibold text-center">
+          &nbsp;Feel free to contact
+        </h4>
+        <div className="items-center text-center">
+          <a href="https://t.me/gregshen0925">
+            <span className="text-3xl decoration-[#447de6]/50 underline animate-pulse">
+              Chat On Telegram!
+            </span>
+          </a>
+        </div>
+        <div className="space-y-10">
+          {/* <div className='flex items-center space-x-5 justify-center'>
+                        <PhoneIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
+                        <p className='text-2xl'>+886 906154732</p>
+                    </div> */}
+
+          <div className="flex items-center space-x-5 justify-center">
+            <EnvelopeIcon className="text-[#447de6] h-7 w-7 " />
+            <p className="text-1xl  md:text-2xl">gregshen0925@pm.me</p>
+          </div>
+          <div className="flex items-center space-x-5 justify-center">
+            <h4>This website is built with</h4>
+          </div>
+          <div className="flex items-center space-x-5 justify-center text-[#09ce86] text-sm md:text-md">
+            <p>Next.js</p>
+            <p>Typescript</p>
+            <p>Sanity</p>
+            <p>Tailwind CSS</p>
+          </div>
+
+          {/* <div className='flex items-center space-x-5 justify-center'>
+                        <MapPinIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
+                        <p className='text-2xl'>address</p>
+                    </div> */}
+        </div>
+
+        {/* <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2 w-60 mx-auto">
+                    <div className='flex space-x-2'>
+                        <input {...register('name')}
+                            placeholder="Name"
+                            className="contactInput"
+                            type="text" />
+                        <input {...register('email')}
+                            placeholder='Email'
+                            className="contactInput"
+                            type="email" />
+                    </div>
+
+                    <input {...register('subject')}
+                        placeholder='Subject'
+                        className="contactInput"
+                        type="text" />
+
+                    <textarea {...register('message')}
+                        placeholder='Message'
+                        className='contactInput' />
+                    <button
+                        type="submit"
+                        className='bg-[#F7A40A] py-5 px-10 rounded-md text-black font-bold
+                    text-lg'>Submit</button>
+                </form> */}
+      </div>
+    </div>
+  );
+};
+
+export default ContactMe;
